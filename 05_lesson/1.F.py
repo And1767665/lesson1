@@ -8,7 +8,8 @@ driver = webdriver.Firefox()
 driver.get("http://the-internet.herokuapp.com/entry_ad")
 
 # Найти и кликнуть на кнопку Close в модальном окне
-close_button = driver.find_element(By.XPATH, "//div[@class='modal-footer']/p/a")
+xpath = "//div[@class='modal-footer']/p/a"
+close_button = driver.find_element(By.XPATH, xpath)
 close_button.click()
 
 # Закрыть браузер

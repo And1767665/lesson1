@@ -7,10 +7,21 @@ driver = webdriver.Chrome()
 # Открыть страницу
 driver.get("http://uitestingplayground.com/dynamicid")
 
-# Кликнуть на синюю кнопку три раза
+# Кликнуть на синюю кнопку (первый раз)
 blue_button = driver.find_element(By.CSS_SELECTOR, "button[class^='btn']")
-for _ in range(3):
-    blue_button.click()
+blue_button.click()
+
+# Ожидание для пользователя перед вторым и третьим кликами
+input("Нажмите Enter, чтобы кликнуть второй раз...")
+
+# Кликнуть на синюю кнопку (второй раз)
+blue_button.click()
+
+# Ожидание для пользователя перед третьим кликом
+input("Нажмите Enter, чтобы кликнуть третий раз...")
+
+# Кликнуть на синюю кнопку (третий раз)
+blue_button.click()
 
 # Закрыть браузер
 driver.quit()
